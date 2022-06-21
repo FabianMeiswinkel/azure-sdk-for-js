@@ -13,13 +13,7 @@ import { Constants } from "../common/constants";
  * @internal
  */
 export const tracingClient = createTracingClient({
-  namespace: Constants.Namespace,
+  namespace: Constants.AzureNamespace,
   packageName: Constants.SDKName,
   packageVersion: Constants.SDKVersion,
 });
-
-/** @internal */
-export const knownContextKeys = {
-  span: Symbol.for("@azure/core-tracing span"),
-  namespace: Symbol.for("@azure/core-tracing namespace"),
-};
